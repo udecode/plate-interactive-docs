@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Plate Interactive Docs.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Plate Interactive Docs" startnode="12" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="CB18C499-BE00-4BD9-AC26-25C478FB5F3A" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* Reset styles */
+<tw-storydata name="Plate Interactive Docs" startnode="12" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="CB18C499-BE00-4BD9-AC26-25C478FB5F3A" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* Reset styles */
 tw-story {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
@@ -255,6 +255,7 @@ To get started, click the link below that most closely matches your goal.
 - [[Get all nodes matching a condition]]
 - [[Get all nodes in the editor]]
 - [[Find the path for a node]]
+- [[Find the DOM element for a node]]
 - [[Get the text content of a node]]
 
 ## Transforming nodes
@@ -432,7 +433,13 @@ Usually when working with Plate, you&#39;ll need the same editor instance that i
 
 However, there may be times when any editor instance will work. In these cases, you can create a temporary editor instance.
 
-&lt;pre&gt;```const editor = createPlateEditor({ plugins });```&lt;/pre&gt;</tw-passagedata><tw-passagedata pid="28" name="Footer" tags="footer" position="450,425" size="100,100">&lt;footer&gt;These docs are a work in progress. (link-repeat: &quot;Contribute to them here.&quot;)[(open-url: &#39;https://github.com/udecode/plate-interactive-docs&#39;)]&lt;/footer&gt;</tw-passagedata></tw-storydata>
+&lt;pre&gt;```const editor = createPlateEditor({ plugins });```&lt;/pre&gt;</tw-passagedata><tw-passagedata pid="28" name="Footer" tags="footer" position="450,425" size="100,100">&lt;footer&gt;These docs are a work in progress. (link-repeat: &quot;Contribute to them here.&quot;)[(open-url: &#39;https://github.com/udecode/plate-interactive-docs&#39;)]&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="29" name="Find the DOM node for a node" tags="" position="575,425" size="100,100">(set: $shortTitle to &quot;DOM node for node&quot;)\
+(display: &quot;Header&quot;)\
+# Find the native DOM element from a Slate node.
+
+&lt;pre&gt;`toDOMNode(editor, node) -&gt; HTMLElement | undefined`&lt;/pre&gt;\
+
+[[How do I get the editor instance?|editor]]</tw-passagedata><tw-passagedata pid="30" name="Find the DOM element for a node" tags="" position="325,425" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
